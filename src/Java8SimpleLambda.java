@@ -11,7 +11,8 @@ public class Java8SimpleLambda {
         words.add("casa do código");
         words.add("caelum");
 
-        words.sort(Comparator.comparingInt(String::length));
+//        words.sort(Comparator.comparing(String::hashCode));
+        words.sort(String.CASE_INSENSITIVE_ORDER);
         words.forEach(System.out::println);
     }
 }
